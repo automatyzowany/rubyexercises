@@ -11,15 +11,27 @@
 
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b = []
-c = a.length
 i = 0
 
-while i < c
+while i < a.length
   if a[i] < 5
-    # b << a[i]
-    puts a[i]
+    b << a[i]
   end
-  if i != c
-    i+= 1
+  i+= 1
+end
+
+
+# bonus task
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = []
+i = 0
+
+number = gets.chomp.to_i
+
+while i < a.length
+  if a[i] < number
+      b << a[i]
   end
+  i += 1
 end
