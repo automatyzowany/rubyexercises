@@ -4,28 +4,21 @@
 # Extras:
 
 # If the number is a multiple of 4, print out a different message.
-# Ask the user for two numbers: one number to check (call it num) and one number to divide by (check). If check divides evenly into num, tell that to the user. If not, print a different appropriate message.
 
+def call(number)
+  modulo = number % 2
+  result =
+    if modulo == 1
+      "Number #{number} is an odd."
+    else
+      if (number % 4).zero?
+        "Number #{number} is an even divided by 4."
+      else
+        "Number #{number} is an even."
+      end
+    end
+  puts result
+end
+puts 'Give me a number:'
 number = gets.chomp.to_i
-modulo = number % 2
-if modulo == 1
-  p "Number " + number.to_s + " is a odd"
-else
-  if number % 4 == 0
-    p "Number " + number.to_s + " is an even divided by 4"
-  else
-    p "Number " + number.to_s + " is an even"
-  end
-end
-
-
-# Bonus task
-
-num = gets.chomp.to_i
-check = gets.chomp.to_i
-
-if check % num == 0
-  p "Your number divides evenly."
-else
-  p "Your number is not dividing evenly."
-end
+call(number)

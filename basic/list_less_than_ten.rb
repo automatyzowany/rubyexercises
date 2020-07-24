@@ -14,24 +14,26 @@ b = []
 i = 0
 
 while i < a.length
-  if a[i] < 5
-    b << a[i]
-  end
+  b << a[i] if a[i] < 5
   i+= 1
 end
+puts b
 
 
 # bonus task
 
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-b = []
-i = 0
+def call(number)
+  a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+  b = []
+  i = 0
 
-number = gets.chomp.to_i
-
-while i < a.length
-  if a[i] < number
-      b << a[i]
+  while i < a.length
+    b << a[i] if a[i] < number
+    i += 1
   end
-  i += 1
+  puts b
 end
+
+puts 'Give me a number:'
+number = gets.chomp.to_i
+call(number)

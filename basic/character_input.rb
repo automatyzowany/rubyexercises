@@ -5,9 +5,11 @@
 # Print out that many copies of the previous message on separate lines. (Hint: the string "\n is the same as pressing the ENTER button)
 
 
-name = gets.chomp
-age = gets.chomp.to_i
-today = 2019
-yearwhen = today + (100 - age)
-howManytimes = gets.chomp.to_i
-puts ("Hello Pawel, you will be 100 y.o. in " + yearwhen.to_s + "\n") * howManytimes
+def call(your_age)
+  this_year = Time.new.year.to_i
+  when_im_100 = this_year + (100 - your_age.to_i)
+  puts "Hello Pawel, you will be 100 y.o in #{when_im_100}"
+end
+puts 'Give me your age: '
+your_age = gets.chomp
+call(your_age)
